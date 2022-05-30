@@ -2,6 +2,7 @@ import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:scrumproject/Utilisateurs/Entities/utilisateur.dart';
 import 'package:http/http.dart' as http;
+import '../../Globals/global.dart';
 import '../../Trains/Train details/Navigation.dart';
 import '../Sign Up/Redirect.dart';
 import '../../../Globals/global.dart' as globals ;
@@ -46,6 +47,7 @@ class _LogInState extends State<LogIn> {
         body: json.encode({'name':user.name,'email': user.email, 'password': user.password}));
     print(res.body);
     if (res.body != null) {
+      CurrentUserEmail = user.email ;
       Navigator.push(
           context,
           MaterialPageRoute(

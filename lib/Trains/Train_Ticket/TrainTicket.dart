@@ -9,11 +9,11 @@ class TrainTicket extends StatelessWidget {
   String Station2 ;
   String Date ;
   String Line ;
-  String TravelTime ;
+  String Price ;
   TrainTicket({Key? key, required this.Type ,
     required this.Station1 , required this.Station2 ,
     required this.Date , required this.Line ,
-    required this.TravelTime }) : super(key: key);
+    required this.Price }) : super(key: key);
   Widget Info(String infoName , String infoValue) {
     return Padding(
       padding: const EdgeInsets.all(20.0),
@@ -47,8 +47,7 @@ class TrainTicket extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Container(
+    return  Container(
           decoration: const BoxDecoration(
           gradient: LinearGradient(
             begin: Alignment(0, -1),
@@ -199,7 +198,7 @@ class TrainTicket extends StatelessWidget {
                       children: [
                        Info("LINE","5/22/71 DC"),
                         Info("DATE",Date),
-                        Info("TIME",TravelTime)
+                        Info("PRICE",Price)
                         ]
                   ),
                   Center(
@@ -265,7 +264,6 @@ class TrainTicket extends StatelessWidget {
           )
         ],
       ),
-      ),
-    );
+      );
   }
   }

@@ -2,6 +2,7 @@ import 'dart:io';
 
 import 'package:flutter/material.dart';
 import 'package:scrumproject/Utilisateurs/Log%20In/Log%20In.dart';
+import 'package:scrumproject/Utilisateurs/Sign%20Up/Sign%20Up.dart';
 import 'Globals/Popup.dart';
 import 'Trains/Available trains/Train_List.dart';
 void main() {
@@ -35,7 +36,7 @@ class MyApp extends StatelessWidget {
       ),*/
 
       home:
-        trainList()
+        LogIn()
      /* TrainTicket(Type : "GRANDES LIGNES",
 
           Station1: "Station1",

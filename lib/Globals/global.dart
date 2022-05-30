@@ -1,6 +1,8 @@
 library globals;
 
-String IPAddress = "192.168.170.236" ;
+String IPAddress = "192.168.170.235"
+    "" ;
+String CurrentUserEmail ='';
 List<String> LongDist = ["Tunis","Hammam lif","Borj Cedria",
 "Grombalia","Bou Argoub","Bir Bourguiba","Enfitha","Kalaaa Kebira",
 "Kalaaa Sghira","Sousse","Monastir","Mahdia","El Jem","La Hencha",

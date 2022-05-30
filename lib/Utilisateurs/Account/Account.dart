@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 import '../../Globals/Popup.dart';
+import '../../Globals/global.dart';
 import '../Log In/Log In.dart';
 import '../Entities/utilisateur.dart';
 
@@ -72,6 +73,7 @@ class _AccountState extends State<Account> {
           body: json.encode({'id': id ,'name':util.name,'email': util.email, 'password': _user.password}));
       print(res.body);
       if (res.body != null) {
+        CurrentUserEmail = util.email ;
         Navigator.of(context).push(
             MaterialPageRoute(builder: (_) => PopUpSuccess(title : "Success !" , subtitle : "Your modifications were saved.")));
       }
